@@ -52,7 +52,7 @@ let NERDTreeQuitOnOpen=1 " se cierra automaticamente nerdtree al abrir un archiv
 let mapleader=" " " tecla maestra para encadenar comandos es space
 
 " space + s habilita easymotion al digitar dos caracteres te permite ir rapidamente a las coinsidencias
-nmap <Leader>s <Plug>(easymotion-s2)  
+nmap <Leader>s <Plug>(easymotion-s2)
 " space + nt habilita nerdtree para abrir el explorador de archivo
 nmap <Leader>nt :NERDTreeFind<CR>
 " space + w para guardar los cambios del archivo
