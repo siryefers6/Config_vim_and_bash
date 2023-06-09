@@ -1,0 +1,180 @@
+Mas utilizados:
+
+a (para entrar en el modo insert despues del caracter donde se encuentra el cursor)
+Shft + A (va al final de la linea y activa el modo insert)
+fy (presionas la tecla 'f' seguida del caracter a buscar, busca la 'y' mas cercana)(es key-sencitive)
+* (me ubico ensima de la palabra a buscar y oprimo *)
+ciw (hace lo mismo que el de arriba pero desde cualquier hubicacion de la palabra o cadena)
+0 (me lleva al inicio de la linea actual)
+$ (me lleva al final de la linea)
+w (me lleva al inicio de la siguiente palabra)
+b (me lleva al inicio de la anterior palabra)
+e (me lleva al final de la siguiente palabra)
+Ir a una linea en especifico:
+20G (se digita numero de la linea y a continuacion G mayuscula)
+Reemplazar cadenas de texto completas en el archivo:
+:%s/numeros/unoAlCinco/gc (reemplaza todas las cadenas similares en el archivo, con la 'c' el programa me preguntara y o n)(similar a ctrl+h de vscode)
+Rehacer:
+Ctrl + r
+Copiar una linea:
+yy
+Cortar linea completa
+dd (es como cortar)
+Realizar busquedas:
+/lo_que_quiero_buscar (para buscar las coincidencias siguientes oprimimos 'n')(busca del cursor hacia adelante)
+?lo_que_quiero_buscar (busca del cursor hacia atras)
+en las busquedas si quieres el resultado anterior de busqueda precionas 'N'
+ 
+
+gg
+]]] COMANDOS Y COMBINACION DE TECLAS PARA VIM BASICOS[[[
+
+*** Comandos vim: ***
+
+vim (abrir el editor vim)
+vim nombre_archivo (abrir un archivo con vim y si no existe lo creara)
+
+### Combinacion de teclas vim: ###
+i (para entrar en el modo insert o escritura)
+a (para entrar en el modo insert despues del caracter donde se encuentra el cursor)
+ESC (salir del modo insert y pasar al modo normal)
+
+Estando en el modo normal podemos ir al final de una linea con:
+Shft + A (va al final de la linea y activa el modo insert)
+
+Moverse en el modo normal (comandos) (evita utilizar las flechas)
+h (izquierda)
+j (abajo)
+k (arriba)
+l (derecha)
+
+Formas de guardar archivos:
+:w (guarda sin cerrar el archivo)(solo sirve si le colocamos nombre al archivo)
+:w archivovim.txt (de esta forma creamos archivo y guardamos)
+
+Formas de salir de vim:
+:q (salir del editor, si no hay cambios que guardar saldra al instante)
+:wq (guardar cambios y salir)
+:x (hace lo mismo que :wq)
+:q! (salir sin guardar cambios)
+
+]]] COMANDOS Y COMBINACION DE TECLAS PARA VIM INTERMEDIOS[[[
+
+*** Comandos vim: ***
+
+:set number (crea un indice numerico para las lineas de codigo)
+:set nu (forma abreviada de :set number)
+0 (me lleva al inicio de la linea actual)
+$ (me lleva al final de la linea)
+w (me lleva al inicio de la siguiente palabra)
+b (me lleva al inicio de la anterior palabra)
+e (me lleva al final de la siguiente palabra)
+cw (si estoy ubicado al principio de la palabra, corta la palabra completa)
+ciw (hace lo mismo que el de arriba pero desde cualquier hubicacion de la palabra o cadena)
+
+Precionar varias veces las teclas de desplazamiento:
+8j (me lleva 8 lineas abajo) 
+8k (me lleva 8 lineas arriba)
+
+Buscar el caracter mas cercano en una linea:
+fy (presionas la tecla 'f' seguida del caracter a buscar, busca la 'y' mas cercana)(es key-sencitive)
+
+Buscar una palabra dentro del codigo:
+* (me ubico ensima de la palabra a buscar y oprimo *)
+
+Volver al inicio de todo el codigo:
+gg
+
+Ir al final de todo el codigo:
+GG
+
+Ir a una linea en especifico:
+20G (se digita numero de la linea y a continuacion G mayuscula)
+
+Salto entre parentesis, corchetes, llaves correspondientes:
+% (encima del operador que quieres desplazarte)
+
+
+Insertar una linea:
+o (crea una nueva linea debajo de la linea actual y activa el modo insert)
+O (crea una nueva linea y baja la linea actual, tambien activa el modo insert)
+
+Eliminar caracteres desde el modo normal:
+x (Elimina el caracter actual)
+X (Elimina el caracter inmediatamente anterior)
+
+Reemplazar un caracter por otro:
+rg (cambia el caracter actual y coloca una g)
+
+*** Comandos vim: ***
+
+Reemplazar cadenas de texto completas en el archivo:
+:%s/numeros/unoAlCinco/gc (reemplaza todas las cadenas similares en el archivo, con la 'c' el programa me preguntara y o n)
+
+Reemplazar en el modo normal:
+Shft + r (habilita el modo reemplazar, es como escribir en el modo normal)
+
+Copiar y pegar textos y habilitar el modo visual:
+v (activar modo visual)
+y (copiar)
+p (pega despues del cursor)
+Shft + p (pega detras del cursor)
+
+Cortar una palabra:
+dw (elimina la palabra a partir de donde este el cursor)
+
+Cortar una linea completa o parcial:
+dd (es como cortar)
+d0 (me lleva al inicio de la linea actual)(para cortar)
+d$ (me lleva al final de la linea)(para borrar)
+dw (me lleva al inicio de la siguiente palabra)(para cortar)
+db (me lleva al inicio de la anterior palabra)(para cortar)
+de (me lleva al final de la siguiente palabra)(para cortar)
+
+Pegar algo copiado o cortado:
+p
+
+Copiar una linea:
+yy
+
+Deshacer accion:
+u
+
+Rehacer:
+Ctrl + r
+
+Realizar busquedas:
+/lo_que_quiero_buscar (para buscar las coincidencias siguientes oprimimos 'n')(busca del cursor hacia adelante)
+?lo_que_quiero_buscar (busca del cursor hacia atras)
+en las busquedas si quieres el resultado anterior de busqueda precionas 'N'
+ 
+
+
+]]] TIPS Y TRUCOS [[[
+
+Dar color al codigo de vim:
+
+Comandos:
+cd
+ls -lha (ver archivos ocultos)
+vim .vimrc (creamos un archivo de configuracion para vim)
+
+Texto del archivo .vimrc:
+ESC (presionamos)
+:x (guardar y salir)
+
+Instalar los pluggins de aqui:
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+Comandos de los pluggins:
+
+espacio + s (permite digitar 2 caracteres para una busqueda rapida e ir asia alli rapidamente)(easymotion)
+espacio + nt (abrir un directorio de busqueda por carpetas del sistema)(nerdtree)
+	-para abrir el menu de nerdtree se accede con la tecla 'm'
+espacio w (guardar)
+espacio q (salir)
+
+atajos mas utiles:
+shft + a    me lleva al final de la linea y activa el modo insertar
+

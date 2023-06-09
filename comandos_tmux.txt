@@ -1,0 +1,116 @@
+]]] COMANDOS Y COMBINACION DE TECLAS PARA SESSIONES [[[
+
+*** Comandos tmux: ***
+
+Crear session:
+tmux (sin especicar un nombre)
+tmux new -s nombre_session (para crear una session con nombre)
+
+Cerrar una ventana de session (si no quedan mas ventanas abiertas se desconecta la session por completo):
+exit
+exit numero_de_pantalla (Cerrar una ventana de la session en especifico)
+
+Cerrar sessiones:
+tmux kill-server (cierra todas las sessiones)
+
+### Combinacion de teclas tmux (Ctrl + b): ###
+
+Salir de la session sin desconectarla (esto se le llama 'detached'):
+Ctrl + b d
+
+
+*** Comandos tmux: ***
+
+Ver listado de sessiones tmux conectadas:
+tmux ls
+
+Volver a la ultima session que estuvimos conectados:
+tmux a
+tmux a -t nombre_session (Volver a una session en especifico:)
+
+
+### Combinacion de teclas tmux (Ctrl + b): ###
+
+Cambiar entre sessiones estando dentro de una session listandolas:
+
+Ctrl + b s (podemos movernos con las teclas de direccion o precionar el numero de la session)
+
+Cambiar nombre de la session:
+Ctrl + b $ 
+
+Movernos entre sessiones 
+Ctrl + b )    (para ir a la siguiente)
+Ctrl + b (    (para ir a la anterior)
+
+
+]]] COMANDOS Y COMBINACION DE TECLAS PARA VENTANAS [[[
+
+### Combinacion de teclas tmux (Ctrl + b): ###
+
+Crear nueva ventana:
+Ctrl + b c
+
+Movernos entre ventadas:
+Ctrl + b n (para ir a la siguiente)
+Ctrl + b p (para ir a la anterior)
+Ctrl + b numero_ventana (para ir a una ventana por orden numerico)
+
+Cambiar el nombre de la ventana actual:
+Ctrl + b ,
+
+Cerrar ventana con combinacion de teclas:
+Ctrl + b &
+
+
+]]] COMANDOS Y COMBINACION DE TECLAS PARA PANELES[[[
+
+
+### Combinacion de teclas tmux (Ctrl + b): ###
+
+Crear panel vertical:
+Ctrl + b %
+
+Crear panel horizontal:
+Ctrl + b "
+
+Movernos entre paneles:
+Ctrl + b flecha_direccion (flecha arriba va arriba, flecha abajo va abajo, flecha derecha va derecha, etc)
+
+Ver numero de los paneles:
+Ctrl + b q
+Ctrl + b q2 (precionas rapidamente Ctrl + b qnumero de el panel para ir al panel)
+
+Hacer zoom a un panel:
+Ctrl + b z (para salir del zoom volvemos a realizar la combinacion)
+
+Convertir un panel en una ventana:
+Ctrl + b !  (desaparece el panel de la ventana donde estaba creado)
+
+Cambiar el tamaño del panel:
+Ctrl + b flechas (debes dejar apretado Ctrl + b)
+
+Cerrar un panel:
+Ctrl + b x
+
+Sincronizar paneles
+Ctrl + b : (permite ejecutar comandos tmux)
+setw synchronize-panes (ahora todo lo que escribamos en el panel actual se escribira de igual manera en todos los paneles)
+
+Cancelar la Sincronizacion:
+Ctrl + b : (y volvemos a escribir el comando setw synchronize-panes)
+
+Poder copiar texto de los resultados de comandos y poder movernos con circulo del raton entre lineas de texto:
+Ctrl + b [
+
+Poder moverte en el texto de la terminal como si estuvieras en vim:
+Ctrl + b : (para escribir comandos)
+setw -g mode-keys vi (este comando te permite moverte como vim, ejecutar los mismos comandos y combinaciones que vim)
+
+Ayuda de tmux:
+Ctrl + b ?
+
+
+
+
+
+
